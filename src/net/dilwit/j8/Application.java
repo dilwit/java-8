@@ -1,5 +1,8 @@
 package net.dilwit.j8;
 
+import net.dilwit.j8.oop.PayByCheque;
+import net.dilwit.j8.oop.PayByCreditCard;
+import net.dilwit.j8.oop.PaymentGateway;
 import net.dilwit.j8.supporting.My;
 import net.dilwit.j8.supporting.MyService;
 import net.dilwit.j8.supporting.MyUtil;
@@ -7,6 +10,9 @@ import net.dilwit.j8.supporting.MyUtil;
 public class Application {
 
 	public static void main(String[] args) {
+		
+		payInOOPStyle();
+		payInFunctionalStyle();
 		
 		// Simple Functional interface
 		// Provide your own logic
@@ -41,5 +47,56 @@ public class Application {
 		ConstructorFunctionalInterface cf = My::new;
 		My my = cf.create("My", "Name");
 		System.out.println(my.toString());
+	}
+
+	private static void payInFunctionalStyle() {
+		PaymentGateway pg = () -> System.out.println("Pay by credit card (Functional way)");
+		pg.pay();
+		
+		
+		pg = () -> System.out.println("Pay by cheque (Functional way)");
+		pg.pay();
+		
+		pg = () -> System.out.println("Pay by pay pal (Functional way)");
+		payInFunctionalStyle(pg);
+		
+		payInFunctionalStyle(() -> System.out.println("Pay by amex (Functional way)")); 
+		
+		Runnable thread = () -> System.out.println("Run by thread (Functional way)");
+		thread.run();
+	}
+	
+	private static void payInFunctionalStyle(PaymentGateway pg) {
+		pg.pay();
+	}
+
+	private static void payInOOPStyle() {
+		PaymentGateway pg = new PayByCreditCard();
+		pg.pay();
+		
+		pg = new PayByCheque();
+		pg.pay();
+		
+		pg = new PaymentGateway() {
+
+			@Override
+			public void pay() {
+				System.out.println("Pay by debit card (OOP way)");
+			}
+			
+		};
+		
+		pg.pay();
+		
+		Runnable thread = new Runnable() {
+
+			@Override
+			public void run() {
+				System.out.println("Run by thread (OOP way)");
+			}
+			
+		};
+		
+		thread.run();
 	}
 }
