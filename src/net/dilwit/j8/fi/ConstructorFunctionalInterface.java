@@ -1,6 +1,6 @@
-package net.dilwit.j8;
+package net.dilwit.j8.fi;
 
-import net.dilwit.j8.supporting.My;
+import net.dilwit.j8.fi.supporting.My;
 
 @FunctionalInterface
 public interface ConstructorFunctionalInterface {

@@ -1,19 +1,22 @@
-package net.dilwit.j8;
+package net.dilwit.j8.fi;
 
-import net.dilwit.j8.oop.PayByCheque;
-import net.dilwit.j8.oop.PayByCreditCard;
-import net.dilwit.j8.oop.PaymentGateway;
-import net.dilwit.j8.supporting.My;
-import net.dilwit.j8.supporting.MyService;
-import net.dilwit.j8.supporting.MyUtil;
+import net.dilwit.j8.fi.oop.PayByCheque;
+import net.dilwit.j8.fi.oop.PayByCreditCard;
+import net.dilwit.j8.fi.oop.PaymentGateway;
+import net.dilwit.j8.fi.supporting.My;
+import net.dilwit.j8.fi.supporting.MyService;
+import net.dilwit.j8.fi.supporting.MyUtil;
 
-public class Application {
+public class FunctionalInterfaceApp {
 
 	public static void main(String[] args) {
 		
 		payInOOPStyle();
 		payInFunctionalStyle();
-		
+		otherFunctionalTryOuts();
+	}
+
+	private static void otherFunctionalTryOuts() {
 		// Simple Functional interface
 		// Provide your own logic
 		SimpleFunctionalInterface si = new SimpleFunctionalInterface() {
