@@ -1,4 +1,4 @@
-package net.dilwit.j8.fi.oop;
+package net.dilwit.j8.fi.pay;
 
 public interface PaymentGateway {
 	

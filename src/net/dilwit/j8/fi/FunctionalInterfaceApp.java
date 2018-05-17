@@ -1,8 +1,8 @@
 package net.dilwit.j8.fi;
 
-import net.dilwit.j8.fi.oop.PayByCheque;
-import net.dilwit.j8.fi.oop.PayByCreditCard;
-import net.dilwit.j8.fi.oop.PaymentGateway;
+import net.dilwit.j8.fi.oop.pay.PayByCheque;
+import net.dilwit.j8.fi.oop.pay.PayByCreditCard;
+import net.dilwit.j8.fi.pay.PaymentGateway;
 import net.dilwit.j8.fi.supporting.My;
 import net.dilwit.j8.fi.supporting.MyService;
 import net.dilwit.j8.fi.supporting.MyUtil;
