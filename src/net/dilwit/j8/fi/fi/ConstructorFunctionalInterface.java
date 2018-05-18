@@ -1,4 +1,4 @@
-package net.dilwit.j8.fi;
+package net.dilwit.j8.fi.fi;
 
 import net.dilwit.j8.fi.supporting.My;
 

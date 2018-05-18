@@ -1,4 +1,4 @@
-package net.dilwit.j8.fi;
+package net.dilwit.j8.fi.fi;
 
 @FunctionalInterface
 public interface SimpleFunctionalInterface {
