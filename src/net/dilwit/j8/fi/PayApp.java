@@ -7,7 +7,9 @@ import net.dilwit.j8.fi.pay.PaymentGateway;
 public class PayApp {
 
 	public static void main(String[] args) {		
+		System.out.println("=== In OOP style ===");
 		payInOOPStyle();
+		System.out.println("=== In Lambda style ===");
 		payInFunctionalStyle();
 	}
 
